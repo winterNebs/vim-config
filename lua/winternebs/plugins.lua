@@ -43,6 +43,7 @@ return packer.startup(function(use)
   -- My plugins here
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
   use { "nvim-lua/plenary.nvim"} -- Useful lua functions used by lots of plugins
+  use { "nvim-lua/popup.nvim"} 
   use { "windwp/nvim-autopairs"} -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim"}
   use { "JoosepAlviste/nvim-ts-context-commentstring"}
@@ -61,6 +62,13 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-path"} -- path completions
   use { "hrsh7th/cmp-nvim-lsp"}
   use { "hrsh7th/cmp-nvim-lua"}
+use { "saadparwaiz1/cmp_luasnip"}
+     use { "hrsh7th/cmp-nvim-lsp"}
+use { "hrsh7th/cmp-nvim-lua"}
+    
+     -- snippets
+  use { "L3MON4D3/LuaSnip"} --snippet engine
+  use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
 
   -- LSP
@@ -68,6 +76,7 @@ return packer.startup(function(use)
   use { "williamboman/nvim-lsp-installer"} -- simple to use language server installer
   use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
   use { "RRethy/vim-illuminate"}
+use {"jubnzv/virtual-types.nvim"}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim"}
