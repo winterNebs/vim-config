@@ -21,3 +21,9 @@ keymap("n", "<leader><Enter>", "o<Esc>", opts)
 keymap("n", "<leader>cn", ":cn<CR>", opts)
 keymap("n", "<leader>cp", ":cp<CR>", opts)
 keymap("n", "<leader>ccl", ":ccl<CR>", opts)
+
+
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
