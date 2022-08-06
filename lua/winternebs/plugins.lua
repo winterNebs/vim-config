@@ -63,8 +63,7 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-nvim-lsp"}
   use { "hrsh7th/cmp-nvim-lua"}
   use { "saadparwaiz1/cmp_luasnip"}
-     use { "hrsh7th/cmp-nvim-lsp"}
-use { "hrsh7th/cmp-nvim-lua"}
+  use { "simrat39/rust-tools.nvim"}
     
      -- snippets
   use { "L3MON4D3/LuaSnip"} --snippet engine
@@ -80,6 +79,7 @@ use {"jubnzv/virtual-types.nvim"}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim"}
+  use {'nvim-telescope/telescope-ui-select.nvim' }
 
   -- Treesitter
   use {
