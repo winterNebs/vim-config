@@ -55,4 +55,6 @@ vim.g.netrw_winsize = 25
 vim.g.gruvbox_bold = 1
 vim.g.gruvbox_tialic= 1
 
+vim.g.vimwiki_list = {{path = "/mnt/l/winterNebs/Documents/musings/vimwiki", syntax = "markdown", ext =  ".md"}}
+
 vim.cmd("colorscheme gruvbox")

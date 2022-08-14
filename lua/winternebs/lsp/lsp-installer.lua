@@ -41,11 +41,11 @@ for _, server in pairs(servers) do
 
   lspconfig[server].setup(opts)
 end
-
-require("rust-tools").setup({
-    server = {
+  opts = {
     on_attach = require("winternebs.lsp.handlers").on_attach,
     capabilities = require("winternebs.lsp.handlers").capabilities,
   }
 
+require("rust-tools").setup({
+    server = opts
 })
