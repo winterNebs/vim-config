@@ -55,6 +55,9 @@ vim.g.netrw_winsize = 25
 vim.g.gruvbox_bold = 1
 vim.g.gruvbox_tialic= 1
 
+vim.g.rooter_patterns = {"!node_modules", ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json"}
+
 vim.g.vimwiki_list = {{path = "/mnt/l/winterNebs/Documents/musings/vimwiki", syntax = "markdown", ext =  ".md"}}
 
 vim.cmd("colorscheme gruvbox")
+
