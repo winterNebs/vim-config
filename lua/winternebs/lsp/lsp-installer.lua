@@ -6,7 +6,6 @@ end
 local servers = {
   "sumneko_lua",
   "cssls",
-  "html",
   "tsserver",
   "pyright",
   "bashls",
@@ -44,6 +43,13 @@ end
   opts = {
     on_attach = require("winternebs.lsp.handlers").on_attach,
     capabilities = require("winternebs.lsp.handlers").capabilities,
+    settings = {
+        ["rust-analyzer"] = {
+            checkOnSave = {
+                command = "clippy"
+            }
+        }
+    }
   }
 
 require("rust-tools").setup({

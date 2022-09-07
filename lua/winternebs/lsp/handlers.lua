@@ -70,6 +70,8 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "<leader>Lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
   keymap(bufnr, "n", "<leader>Ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
   keymap(bufnr, "n", "<leader>Lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+  keymap(bufnr, "n", "<leader>LL", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
 end
 
 M.on_attach = function(client, bufnr)

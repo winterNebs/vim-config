@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use {"tpope/vim-surround", commit="bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea"}
   use {"vimwiki/vimwiki", commit="63af6e72dd3fa840bffb3ebcb8c96970c02e0913"}
   use {"preservim/vim-markdown", commit="3a9643961233c2812816078af8bd1eaabc530dce"}
+  use {"folke/zen-mode.nvim", commit="f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c"}
 
   -- Colorschemes
   use { "gruvbox-community/gruvbox", commit="95b120a15d0765037d2836d04e3360c273caf111"}
@@ -85,8 +86,8 @@ use {"jubnzv/virtual-types.nvim", commit="31da847fa54b801f309a08123935626adda4aa
   use {'nvim-telescope/telescope-ui-select.nvim' , commit="62ea5e58c7bbe191297b983a9e7e89420f581369"}
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter", commit="11e88f698ac27081e2d238289474c4b8780007d3"}
+  use {"nvim-treesitter/nvim-treesitter", commit="11e88f698ac27081e2d238289474c4b8780007d3"}
+  use {"romgrk/nvim-treesitter-context", commit="8e88b67d0dc386d6ba1b3d09c206f19a50bc0625"}
 
   -- Git
   use { "lewis6991/gitsigns.nvim", commit="f6d93f90bed4f86ef204bb023b3bdea9fd27d7f6"}

@@ -19,6 +19,7 @@ keymap("n", "<leader><Enter>", "o<Esc>", opts)
 keymap("n", "<leader>cn", ":cn<CR>", opts)
 keymap("n", "<leader>cp", ":cp<CR>", opts)
 keymap("n", "<leader>ccl", ":ccl<CR>", opts)
+keymap("n", "<leader>z", ":ZenMode<CR>",opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
