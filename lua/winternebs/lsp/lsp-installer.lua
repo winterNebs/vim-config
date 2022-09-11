@@ -46,7 +46,7 @@ end
     settings = {
         ["rust-analyzer"] = {
             checkOnSave = {
-                command = "clippy"
+                --command = "clippy"
             }
         }
     }
