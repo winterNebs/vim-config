@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim", commit="8914051a3d399e9715833ad76bbf5fe69ea7faf0"} -- for formatters and linters
   use { "RRethy/vim-illuminate", commit="27f6ef135a88d9410a33cf92fc47f5c018df552c"}
 use {"jubnzv/virtual-types.nvim", commit="31da847fa54b801f309a08123935626adda4aaad"}
+use {"j-hui/fidget.nvim", commit="492492e7d50452a9ace8346d31f6d6da40439f0e"}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit="d793de0f12d874c463e81edabee741b802c1a37a"}
