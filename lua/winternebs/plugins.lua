@@ -61,7 +61,8 @@ return packer.startup(function(use)
   use { "gruvbox-community/gruvbox", commit="95b120a15d0765037d2836d04e3360c273caf111"}
 
   -- cmp plugins
-  use { "hrsh7th/nvim-cmp", commit="b1ebdb0a17daaad13606b802780313a32e59781b"} -- The completion plugin
+  use { "hrsh7th/nvim-cmp", commit="913eb8599816b0b71fe959693080917d8063b26a"} -- The completion plugin
+  --use { "hrsh7th/nvim-cmp", commit="b1ebdb0a17daaad13606b802780313a32e59781b"} -- The completion plugin old 
   use { "hrsh7th/cmp-buffer", commit="3022dbc9166796b644a841a02de8dd1cc1d311fa"} -- buffer completions
   use { "hrsh7th/cmp-path", commit="447c87cdd6e6d6a1d2488b1d43108bfa217f56e1"} -- path completions
   use { "hrsh7th/cmp-nvim-lsp", commit="affe808a5c56b71630f17aa7c38e15c59fd648a8"}
