@@ -1,6 +1,6 @@
 vim.opt.guicursor = ""
 
-vim.opt.mouse = "a" -- Judging yet? ? 
+vim.opt.mouse = "vi" -- Judging yet? ? 
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -50,16 +50,16 @@ vim.opt.splitright = true
 
 vim.opt.showmode = false
 
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
+--vim.g.netrw_browse_split = 0
+--vim.g.netrw_banner = 0
+--vim.g.netrw_winsize = 25
 
 vim.g.gruvbox_bold = 1
 vim.g.gruvbox_tialic= 1
-
-vim.g.rooter_patterns = {"!node_modules", ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json"}
-
-vim.g.vimwiki_list = {{path = "/mnt/l/winterNebs/Documents/musings/vimwiki", syntax = "markdown", ext =  ".md"}}
+--
+--vim.g.rooter_patterns = {"!node_modules", ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json"}
+--
+--vim.g.vimwiki_list = {{path = "/mnt/l/winterNebs/Documents/musings/vimwiki", syntax = "markdown", ext =  ".md"}}
 
 vim.cmd("colorscheme gruvbox")
 
