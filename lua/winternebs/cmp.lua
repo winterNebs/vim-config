@@ -42,31 +42,15 @@ local kind_icons = {
 	Operator = "",
 	TypeParameter = "",
 }
-  local lspkind_comparator = function(conf)
-    local lsp_types = require('cmp.types').lsp
-    return function(entry1, entry2)
-      if entry1.source.name ~= 'nvim_lsp' then
-        if entry2.source.name == 'nvim_lsp' then
-          return false
-        else
-          return nil
-        end
-      end
-      local kind1 = lsp_types.CompletionItemKind[entry1:get_kind()]
-      local kind2 = lsp_types.CompletionItemKind[entry2:get_kind()]
 
-      local priority1 = conf.kind_priority[kind1] or 0
-      local priority2 = conf.kind_priority[kind2] or 0
-      if priority1 == priority2 then
-        return nil
-      end
-      return priority2 < priority1
-    end
-  end
-
-  local label_comparator = function(entry1, entry2)
-    return entry1.completion_item.label < entry2.completion_item.label
-  end
+local tabnine = require("cmp_tabnine.config")
+tabnine:setup({
+	max_lines = 1000,
+	max_num_results = 20,
+	sort = true,
+	run_on_every_keystroke = true,
+	snippet_placeholder = "..",
+})
 cmp.setup({
     preselect = cmp.PreselectMode.None,
 	snippet = {
@@ -128,52 +112,26 @@ cmp.setup({
 				buffer = "[Buffer]",
 				path = "[Path]",
 				emoji = "[Emoji]",
+                cmp_tabnine = "[T9]",
 			})[entry.source.name]
 			vim_item.kind = kind_icons[vim_item.kind]
+            if entry.source.name == "cmp_tabnine" then
+				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+					vim_item.menu = entry.completion_item.data.detail .. " " .. vim_item.menu
+				end
+				vim_item.kind = ""
+			end
 			return vim_item
 		end,
 	},
 	sources = {
+        { name = "cmp_tabnine"},
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
-    sorting = {
-        comparators = {
-            lspkind_comparator({
-          kind_priority = {
-            Field = 11,
-            Property = 11,
-            Constant = 10,
-            Enum = 10,
-            EnumMember = 10,
-            Event = 10,
-            Function = 10,
-            Method = 10,
-            Operator = 10,
-            Reference = 10,
-            Struct = 10,
-            Variable = 9,
-            File = 8,
-            Folder = 8,
-            Class = 5,
-            Color = 5,
-            Module = 5,
-            Keyword = 2,
-            Constructor = 1,
-            Interface = 1,
-            Snippet = 0,
-            Text = 1,
-            TypeParameter = 1,
-            Unit = 1,
-            Value = 1,
-          },
-        }),
-        label_comparator,
-        }
-    },
 
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
