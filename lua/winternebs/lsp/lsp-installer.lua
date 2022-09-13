@@ -1,5 +1,6 @@
 local status_ok, lsp_installer = pcall(require, 'nvim-lsp-installer')
 if not status_ok then
+  print 'nvim-lsp-installer is not ok'
   return
 end
 
@@ -14,6 +15,7 @@ lsp_installer.setup {
 
 local lspconfig_status_ok, lspconfig = pcall(require, 'lspconfig')
 if not lspconfig_status_ok then
+  print 'lspconfig_status_ok not ok'
   return
 end
 
