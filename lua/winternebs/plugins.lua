@@ -78,7 +78,7 @@ return packer.startup(function(use)
   --  use { "lewis6991/impatient.nvim", commit="49f4ed4a96e0dec3425f270001f341f78400fb49"}
   --  use { "lukas-reineke/indent-blankline.nvim", commit="c15bbe9f23d88b5c0b4ca45a446e01a0a3913707"}
   --  use {"tpope/vim-surround", commit="bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea"}
-  --  use {"vimwiki/vimwiki", commit="63af6e72dd3fa840bffb3ebcb8c96970c02e0913"}
+  use { 'vimwiki/vimwiki', commit = '63af6e72dd3fa840bffb3ebcb8c96970c02e0913' }
   --  use {"preservim/vim-markdown", commit="3a9643961233c2812816078af8bd1eaabc530dce"}
   --  use {"folke/zen-mode.nvim", commit="f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c"}
   --
