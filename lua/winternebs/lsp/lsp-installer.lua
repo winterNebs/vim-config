@@ -7,6 +7,11 @@ end
 local servers = {
   'sumneko_lua',
   'rust_analyzer',
+  'pyright',
+  'tsserver',
+  'html',
+  'cssls',
+  'svelte',
 }
 
 lsp_installer.setup {
