@@ -14,7 +14,9 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.prettier.with {
-      extra_args = { '--tab-width 4', '--use-tabs' },
+      --extra_args = { '--tab-width 4', '--use-tabs' },
+      --extra_filetypes = { 'svelte' },
+      filetypes = { 'svelte' },
     },
     formatting.black.with { extra_args = { '--fast' } },
     formatting.stylua,
