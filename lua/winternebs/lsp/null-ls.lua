@@ -16,7 +16,7 @@ null_ls.setup {
     formatting.prettier.with {
       --extra_args = { '--tab-width 4', '--use-tabs' },
       --extra_filetypes = { 'svelte' },
-      filetypes = { 'svelte' },
+      extra_filetypes = { 'svelte', 'css' },
     },
     formatting.black.with { extra_args = { '--fast' } },
     formatting.stylua,

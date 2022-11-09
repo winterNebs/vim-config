@@ -52,6 +52,7 @@ tabnine:setup {
   sort = true,
   run_on_every_keystroke = true,
   snippet_placeholder = '..',
+  show_prediction_strength = true,
 }
 cmp.setup {
   preselect = cmp.PreselectMode.None,
@@ -129,11 +130,11 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
     { name = 'nvim_lua' },
     { name = 'luasnip' },
     { name = 'buffer' },
+    { name = 'cmp_tabnine' },
     { name = 'path' },
   },
 
