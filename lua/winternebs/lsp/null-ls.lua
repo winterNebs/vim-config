@@ -11,14 +11,15 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup {
-  debug = false,
+  debug = true,
   sources = {
     formatting.prettier.with {
       --extra_args = { '--tab-width 4', '--use-tabs' },
       --extra_filetypes = { 'svelte' },
       extra_filetypes = { 'svelte', 'css' },
     },
-    formatting.black.with { extra_args = { '--fast' } },
+    -- seriously?
+    formatting.black.with { extra_args = { '--line-length', '80' } },
     formatting.stylua,
     formatting.rustfmt,
     diagnostics.flake8,

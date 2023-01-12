@@ -6,7 +6,6 @@ end
 
 local servers = {
   'sumneko_lua',
-  'rust_analyzer',
   'pyright',
   'tsserver',
   'html',
@@ -44,3 +43,9 @@ for _, server in pairs(servers) do
 
   lspconfig[server].setup(opts)
 end
+
+require('rust-tools').setup {
+  server = {
+    on_attach = require('winternebs.lsp.handlers').on_attach,
+  },
+}

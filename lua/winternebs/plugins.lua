@@ -67,7 +67,7 @@ return packer.startup(function(use)
   use { 'tzachar/cmp-tabnine', commit = '8f54df340baa6d1a7164a5388d0d1d3d8e4faa29', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
   use { 'RRethy/vim-illuminate', commit = '27f6ef135a88d9410a33cf92fc47f5c018df552c' } -- highlight other uses under cursor
 
-  --  use { "simrat39/rust-tools.nvim", commit="367c9a8157f5a7818784f1d2737f582deab7b848"} -- ur not supposed to use this LOL
+  use { 'simrat39/rust-tools.nvim', commit = '367c9a8157f5a7818784f1d2737f582deab7b848' } -- ur not supposed to use this LOL
   --
   use { 'windwp/nvim-autopairs', commit = 'a7a8be3d2f2473300d070293903ac8b95edeccc1' } -- Autopairs, integrates with both cmp and treesitter
   --  use { "numToStr/Comment.nvim", commit="ae8c440fe98c65f3a941d6fc6de75538c5c1ecde"}
